@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <form class="login">
+    <div class="login-div">
+      <h2>Welcome, User!</h2>
+      <p>Please Log In</p>
+      <div class="input-box">
+        <input
+          name="Email"
+          type="text"
+          placeholder="Email"
+          [(ngModel)]="loginObj.Username"
+        />
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="input-box">
+        <input
+          name="Password"
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="loginObj.Password"
+        />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <button class="login-btn" (click)="onLogin()">
+        Sign Up
+      </button>
+      <div class="links">
+        <a href="login">Already Registered? Login</a>
+      </div>
+    </div>
+  </form>
+</div>

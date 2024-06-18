@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "d149",
+      "Name": "Test User",
+      "EmailId": "test@gmail.com",
+      "Password": "user123$"
+    },
+    {
+      "id": "1dec",
+      "Name": "New User",
+      "EmailId": "test@gmail.com",
+      "Password": "user123$"
+    },
+    {
+      "id": "915c",
+      "Name": "effefefe",
+      "EmailId": "efefef",
+      "Password": "efeff"
+    },
+    {
+      "id": "9876",
+      "Name": "Bhav Sagar",
+      "EmailId": "bhavs@mindfiresolutions.com",
+      "Password": "mindfire123$"
+    }
+  ]
+}

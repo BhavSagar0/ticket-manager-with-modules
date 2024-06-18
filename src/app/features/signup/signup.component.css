@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper{
+  height: 450px;
+  width: 320px;
+  color: #ef5350d9;
+  border: 1px solid #ef535076;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.login-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper h2{
+  font-size: 36px;
+  text-align: center;
+  color: #EF5350;
+}
+
+.wrapper p{
+  font-size: 18px;
+  text-align: center;
+}
+
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #EF5350;
+  border-radius: 40px;
+  padding: 20px 45px 20px 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.input-box input::placeholder{
+  color:#EF5350;
+}
+
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+  color: #EF5350;
+}
+
+.signup-btn{
+  width: 60%;
+  border-radius: 40px;
+  background-color: #EF5350;
+  border: none;
+  color: white;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.links a{
+  text-decoration: none;
+  color: rgb(129, 127, 255);
+}
