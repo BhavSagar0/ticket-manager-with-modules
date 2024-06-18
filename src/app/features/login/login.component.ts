@@ -24,7 +24,7 @@ export class LoginComponent {
       console.log("Current Username" + this.loginObj.Username);
 
       var currentUser = this.resultObj.filter((x:User) => x.EmailId === this.loginObj.Username);
-      console.log("Current User : " + currentUser[0]);
+      console.log("Current User : " + (currentUser[0]).EmailId);
       if(currentUser[0].Password === this.loginObj.Password)
         this.router.navigate(["home"]);
     });
