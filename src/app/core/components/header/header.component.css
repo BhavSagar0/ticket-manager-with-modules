@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    top: 0px;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.create-ticket-btn {
+    width: 200px;
+    border-radius: 4px;
+    background-color: #07d143;
+    border: none;
+    color: white;
+    height: 40px;
+    margin: 10px;
+  }
+  
+  .create-ticket-btn:hover, :focus {
+      background-color: #05b43a;
+    }
+  
+   
+.heading-div{
+    margin-left: 10px;
+}
+
+.logout-div{
+    float: right;
+}
+
+.logout-btn {
+  width: 150px;
+  border-radius: 4px;
+  background-color: red;
+  border: none;
+  color: white;
+  height: 40px;
+  float: right;
+  margin: 10px;
+}
+
+.logout-link{
+    text-decoration: none;
+}
+
+.btn-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}

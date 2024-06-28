@@ -1,1 +1,117 @@
-<p>home works!</p>
+<app-header></app-header>
+<div class="master-class">
+  
+  <div class="filter-by-div">
+    <span>Filter By :&nbsp;&nbsp;</span>
+    <div>
+      <button class="filter-btn" (click)="togglePriorityFilterDropdown()">
+        Priority List <i style="font-size: 10px; padding-top: 2px">&#x25BC;</i>
+      </button>
+      <div class="filter-dropdown" *ngIf="showFilterbyPriorityDropdown">
+        <button
+          *ngFor="let filterValue of priorityFilterNames; let i = index"
+          (click)="filterBy(filterValue, 1)"
+        >
+          {{ filterValue }}
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <button class="filter-btn" (click)="toggleDueDateFilterDropdown()">
+        Due Date <i style="font-size: 10px; padding-top: 2px">&#x25BC;</i>
+      </button>
+      <div class="filter-dropdown" *ngIf="showFilterByDueDateDropDown">
+        <button
+          *ngFor="let filterValue of dueDateFilterNames; let i = index"
+          (click)="filterBy(i+1, 2)"
+        >
+          {{ filterValue }}
+        </button>
+        
+      </div>
+    </div>
+    <div class="custom-range-div" *ngIf="dateRangeToggle">
+      <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input #startDate matStartDate placeholder="Start date" (dateChange)="startDateChange(startDate.value)"/>
+          <input #endDate matEndDate placeholder="End date"
+          (dateChange)="endDateChange(endDate.value)" />
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    
+    
+    
+
+
+    <div>
+      <button class="clear-filter-btn" (click)="clearAllFilters()">
+        Clear All Filters &#10060;
+      </button>
+    </div>
+  </div>
+
+  <mat-date-range-picker #picker></mat-date-range-picker>
+  <div class="ticket-list-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">S. No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th
+            class="tableHeader-sortable"
+            scope="col"
+            (click)="sort(1, priorityLevelOrder)"
+          >
+            Priority Level
+          </th>
+          <th class="tableHeader-sortable" scope="col" (click)="sort(2, dueDateOrder)">
+            Due Date
+          </th>
+          <th scope="col">Initial Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="table-row"
+          *ngFor="let ticket of ticketListView | slice : start : end; let i = index"
+        >
+          <td class="table-data">{{ this.start + i + 1 }}</td>
+          <td class="table-data">{{ ticket.Title }}</td>
+          <td class="table-data">{{ ticket.Description }}</td>
+          <td class="table-data">{{ ticket.PriorityLevel }}</td>
+          <td class="table-data">{{ ticket.DueDate }}</td>
+          <td class="table-data">{{ ticket.InitialStatus }}</td>
+          <td class="table-data">
+            <a [routerLink]="['/create-ticket', ticket.id]"
+              ><i class="bx bxs-edit" style="font-size: 35px; color: blue"></i
+            ></a>
+          </td>
+          <td class="table-data">
+            <a (click)="onDelete(ticket.id)" style="cursor: pointer"
+              ><i class="bx bxs-trash" style="font-size: 35px; color: red"></i
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <section id="pagination">
+    <button
+      class="pagination-btn"
+      [class.active]="i===currentPageSelection"
+      *ngFor="let ticket of ticketListView | nthElement : 10; let i = index"
+      (click)="onPageChange(i)"
+    >
+      {{ i + 1 }}
+    </button>
+  </section>
+</div>
+
+

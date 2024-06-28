@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="master-screen">
+  <div class="form-box">
+    <form>
+      <div>
+        <h2>Create New Ticket</h2>
+        <div>
+          <label>Title</label>
+          <input name="Title" type="text" [(ngModel)]="ticketObj.Title" />
+        </div>
+        <div>
+          <label>Description of the issue</label>
+          <input name="Description" type="text" [(ngModel)]="ticketObj.Description" />
+        </div>
+        <div>
+          <label>Priority Level</label>
+          <select name="Priority Level" [(ngModel)]="ticketObj.PriorityLevel">
+            <option value="0" selected>Select Priority</option>
+            <option *ngFor="let priorityLevel of priorityLevelsList;let i = index" [value]="priorityLevel">{{priorityLevel}}</option>
+          </select>
+        </div>
+        <div>
+          <label>Due Date</label>
+          <input name="Due Date" type="date" [(ngModel)]="ticketObj.DueDate" />
+        </div>
+        <div>
+          <label>Initial Status</label>
+          <input name="Initial Status" type="text" [(ngModel)]="ticketObj.InitialStatus" />
+        </div>
+      </div>
+      <div class="submit-form">
+        <input type="submit" value="Submit" (click)="onSubmit()"/>
+      </div>
+    </form>
+  </div>
+</div>

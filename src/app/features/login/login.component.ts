@@ -15,24 +15,23 @@ export class LoginComponent {
   onLogin() {
     const headers = { 'content-type': 'application/json'}
     var res = this.http.get('http://localhost:3000/users', {'headers':headers}).subscribe((result:any) => {
-      
+      console.log(result);
       this.resultObj = JSON.parse(JSON.stringify(result)) as User[];
-
-      var newObj = JSON.parse(JSON.stringify(result)) as User[];
-      console.log("Users list Object " + this.resultObj);
-
-      console.log("Current Username" + this.loginObj.Username);
-
-      var currentUser = this.resultObj.filter((x:User) => x.EmailId === this.loginObj.Username);
-      console.log("Current User : " + (currentUser[0]).EmailId);
-      if(currentUser[0].Password === this.loginObj.Password)
+      var currentUser = this.resultObj.filter((x:User) => x.email === this.loginObj.email);
+      if(currentUser[0].password === this.loginObj.password){
+        sessionStorage.setItem("loggedInUserId", currentUser[0].id);
         this.router.navigate(["home"]);
+      }
+      else{
+        alert("Incorrect Credentials!");
+      }
+        
     });
     
   }
   private router = inject(Router);
 
   constructor(private http: HttpClient) {
-    this.loginObj = { Username: '', Password: '' };
+    this.loginObj = { email: '', password: '' };
   }
 }

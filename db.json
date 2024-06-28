@@ -3,26 +3,160 @@
     {
       "id": "d149",
       "Name": "Test User",
-      "EmailId": "test@gmail.com",
-      "Password": "user123$"
+      "email": "test@gmail.com",
+      "password": "user123$"
     },
     {
       "id": "1dec",
       "Name": "New User",
-      "EmailId": "test@gmail.com",
-      "Password": "user123$"
+      "email": "test@gmail.com",
+      "password": "user123$"
     },
     {
       "id": "915c",
       "Name": "effefefe",
-      "EmailId": "efefef",
-      "Password": "efeff"
+      "email": "efefef",
+      "password": "efeff"
     },
     {
       "id": "9876",
       "Name": "Bhav Sagar",
-      "EmailId": "bhavs@mindfiresolutions.com",
-      "Password": "mindfire"
+      "email": "bhavs@mindfiresolutions.com",
+      "password": "mindfire"
+    },
+    {
+      "id": "797a",
+      "Name": "BhavSagar test-json-auth",
+      "email": "bhavs@test.com",
+      "password": "mindfire"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "dc80",
+      "UserId": "797a",
+      "Title": "New ticket id tes",
+      "Description": "New ticket id test",
+      "PriorityLevel": "High",
+      "DueDate": "2024-06-24",
+      "InitialStatus": "dwwdwf"
+    },
+    {
+      "id": "d555",
+      "UserId": "797a",
+      "Title": "Lates ticket",
+      "Description": "Latest ticket test",
+      "PriorityLevel": "Medium",
+      "DueDate": "2024-07-03",
+      "InitialStatus": "Active"
+    },
+    {
+      "id": "c2a7",
+      "UserId": "797a",
+      "Title": "New ticket no 5",
+      "Description": "New ticket no 5",
+      "PriorityLevel": "Medium",
+      "DueDate": "2024-07-04",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "91a7",
+      "UserId": "797a",
+      "Title": "Ticket no 5",
+      "Description": "ticket no 5",
+      "PriorityLevel": "Medium",
+      "DueDate": "2024-06-28",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "8bf0",
+      "UserId": "797a",
+      "Title": "Test ticket no 6",
+      "Description": "Test ticket no 6",
+      "PriorityLevel": "High",
+      "DueDate": "2024-06-29",
+      "InitialStatus": "Active"
+    },
+    {
+      "id": "884a",
+      "UserId": "797a",
+      "Title": "Ticket no 7",
+      "Description": "Test ticket no 7",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "885a",
+      "UserId": "797a",
+      "Title": "Ticket no 8",
+      "Description": "Test ticket no 8",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "886a",
+      "UserId": "797a",
+      "Title": "Ticket no 9",
+      "Description": "Test ticket no 9",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "737z",
+      "UserId": "797a",
+      "Title": "Ticket no 7",
+      "Description": "Test ticket no 7",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "333w",
+      "UserId": "797a",
+      "Title": "Ticket no 8",
+      "Description": "Test ticket no 8",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "182c",
+      "UserId": "797a",
+      "Title": "Ticket no 9",
+      "Description": "Test ticket no 9",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "Inactive"
+    },
+    {
+      "id": "4650",
+      "UserId": "797a",
+      "Title": "High Priority ticket 9",
+      "Description": "High Priority ticket 9",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-06",
+      "InitialStatus": "High Priority"
+    },
+    {
+      "id": "0d8d",
+      "UserId": "797a",
+      "Title": "High Prioirity ticket 10",
+      "Description": "High Prioirity ticket 10",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-05",
+      "InitialStatus": "High"
+    },
+    {
+      "id": "e4a6",
+      "UserId": "797a",
+      "Title": "High Prioirity ticket 11",
+      "Description": "High Prioirity ticket 11",
+      "PriorityLevel": "High",
+      "DueDate": "2024-07-04",
+      "InitialStatus": "High"
     }
   ]
 }

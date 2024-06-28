@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+.master-screen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper{
-  height: 450px;
+  height: 380px;
   width: 320px;
   color: #ef5350d9;
   border: 1px solid #ef535076;
@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .wrapper h2{

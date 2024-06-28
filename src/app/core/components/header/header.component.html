@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="heading-div">
+    <h1>Ticket Manager App</h1>
+  </div>
+
+  <div class="btn-div">
+    <div>
+      <button class="create-ticket-btn" (click)="goToCreateNewTicket()">
+        + Create a new Ticket
+      </button>
+    </div>
+    <div class="logout-div">
+      <a class="logout-link" [routerLink]="['/login']"
+        ><button class="logout-btn">Log Out</button></a
+      >
+    </div>
+  </div>
+</header>

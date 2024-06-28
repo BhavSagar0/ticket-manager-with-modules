@@ -15,7 +15,7 @@ export class SignupComponent {
   signupObj: Signup;
 
   constructor(private http: HttpClient){
-    this.signupObj = { Name: '', EmailId: '', Password: '' };
+    this.signupObj = { Name: '', email: '', password: '' };
   }
 
   onSignup(){
